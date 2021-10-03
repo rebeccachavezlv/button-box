@@ -29,7 +29,7 @@ class Directory extends React.Component {
                 imageUrl: Soup1,
                 id: 3,
                 size: 'large',
-                linkUrl: ''
+                linkUrl: 'shop'
             }
         ]
     }
