@@ -1,40 +1,32 @@
 import React from 'react'
 import './App.css';
+
 import { Switch, Route } from 'react-router-dom'
 
-import { auth } from './firebase/firebase.utils'
-
 import HomePage from './pages/homepage/homepage.component';
-import ShopPage from './pages/shop/shop.component';
-import SignInSignUp from './pages/sign-in-sign-up/sign-in-sign-up.component';
 import Header from './components/header/header.component'
+import AboutPage from './pages/about-page/about-page.component';
+import ItemDetail from './pages/item-detail/item-detail.component';
+
+import { ShopItems } from './shop-items';
 
 class App extends React.Component {
   state = {
-    currentUser: null
+    items: ShopItems
   }
   
-  unsubscribeFromAuth = null;
-
-  componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user });
-    })
-  }
-
-  componentWillUnmount() {
-    this.unsubscribeFromAuth()
-  }
-
-
   render(){
     return (
       <div>
         <Header currentUser={this.state.currentUser}/>
         <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route exact path='/shop' component={ShopPage} />
-          <Route exact path='/signin' component={SignInSignUp} />
+          <Route exact path='/' >
+            <HomePage items={this.state.items} />
+          </Route>
+          <Route exact path='/about' component={AboutPage} />
+          <Route path='/item/:slug'>
+            <ItemDetail items={this.state.items} />
+          </Route>
         </Switch>
       </div>
     );

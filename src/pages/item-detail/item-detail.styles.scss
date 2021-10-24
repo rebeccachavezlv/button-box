@@ -1,0 +1,46 @@
+.item-detail{
+    display: flex;
+    flex-direction: column;
+
+    .main-image, .gallery-image{
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+    
+    .image-gallery {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 400px;
+
+        .main-image{
+            height: 100%;
+            width: 400px;
+        }
+
+        .smaller-images{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        
+        .gallery-image{
+            height: 200px;
+            width: 200px;
+
+
+        }
+    }
+
+    .add-to-cart{
+        padding-top: 30px;
+    }
+
+
+}
+
