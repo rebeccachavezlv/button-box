@@ -2,6 +2,7 @@ import React from 'react';
 import './item-detail.styles.scss'
 
 import { useParams } from 'react-router';
+import { connect } from 'react-redux';
 
 import CustomButton from '../../components/custom-button/custom-button.component';
 
@@ -46,4 +47,8 @@ const ItemDetail = ({ items }) => {
     )
 }
 
-export default ItemDetail
+const mapStateToProps = state => ({
+    items: state.shop.items
+})
+
+export default connect(mapStateToProps)(ItemDetail)

@@ -8,29 +8,17 @@ import Header from './components/header/header.component'
 import AboutPage from './pages/about-page/about-page.component';
 import ItemDetail from './pages/item-detail/item-detail.component';
 
-import { ShopItems } from './shop-items';
 
-class App extends React.Component {
-  state = {
-    items: ShopItems
-  }
-  
-  render(){
-    return (
-      <div>
-        <Header currentUser={this.state.currentUser}/>
-        <Switch>
-          <Route exact path='/' >
-            <HomePage items={this.state.items} />
-          </Route>
-          <Route exact path='/about' component={AboutPage} />
-          <Route path='/item/:slug'>
-            <ItemDetail items={this.state.items} />
-          </Route>
-        </Switch>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <Header/>
+    <Switch>
+      <Route exact path='/' component={HomePage} />
+      <Route exact path='/about' component={AboutPage} />
+      <Route path='/item/:slug' component={ItemDetail} />
+    </Switch>
+  </div>
+);
+
 
 export default App;
