@@ -1,15 +1,15 @@
-import MarryTheNight1 from './assets/photos/marry-the-night-1.JPG'
-import MarryTheNight2 from './assets/photos/marry-the-night-2.JPG'
+import MarryTheNight1 from '../../assets/photos/marry-the-night-1.JPG'
+import MarryTheNight2 from '../../assets/photos/marry-the-night-2.JPG'
 
-import PerfectIllusion1 from './assets/photos/perfect-illusion-1.JPG'
-import PerfectIllusion2 from './assets/photos/perfect-illusion-2.JPG'
-import PerfectIllusion3 from './assets/photos/perfect-illusion-3.PNG'
-import PerfectIllusion4 from './assets/photos/perfect-illusion-4.JPG'
-import PerfectIllusion5 from './assets/photos/perfect-illusion-5.JPG'
+import PerfectIllusion1 from '../../assets/photos/perfect-illusion-1.JPG'
+import PerfectIllusion2 from '../../assets/photos/perfect-illusion-2.JPG'
+import PerfectIllusion3 from '../../assets/photos/perfect-illusion-3.PNG'
+import PerfectIllusion4 from '../../assets/photos/perfect-illusion-4.JPG'
+import PerfectIllusion5 from '../../assets/photos/perfect-illusion-5.JPG'
 
-import BiteMe1 from './assets/photos/bite-me-1.JPG'
-import BiteMe2 from './assets/photos/bite-me-2.JPG'
-import BiteMe3 from './assets/photos/bite-me-3.JPG'
+import BiteMe1 from '../../assets/photos/bite-me-1.JPG'
+import BiteMe2 from '../../assets/photos/bite-me-2.JPG'
+import BiteMe3 from '../../assets/photos/bite-me-3.JPG'
 
 export const ShopItems = [
     {

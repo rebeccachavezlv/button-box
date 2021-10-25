@@ -8,8 +8,8 @@ import MenuItem from '../menu-item/menu-item.component'
 
 const Directory = ({items}) => (
     <div className='directory-menu'>
-        {items.map(({id, ...otherSectionProps}) => (
-            <MenuItem key={id} {...otherSectionProps} />
+        {items.map(item => (
+            <MenuItem key={item.id} item={item} />
         ))}
     </div>
 );

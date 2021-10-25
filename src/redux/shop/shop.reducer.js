@@ -1,4 +1,4 @@
-import { ShopItems } from "../../shop-items"
+import { ShopItems } from "./shop-items"
 
 const INITIAL_STATE = {
     items: ShopItems,
