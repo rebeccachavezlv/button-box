@@ -19,7 +19,8 @@ export const ShopItems = [
         id: 1,
         price: 35,
         linkUrl: 'marry-the-night',
-        description: 'Stainless steel. Cute lil dangly charms.'
+        description: 'Stainless steel. Cute lil dangly charms.',
+        darkBackground: false
     },
     {
         title: 'Perfect Illusion',
@@ -28,7 +29,8 @@ export const ShopItems = [
         id: 2,
         price: 20,
         linkUrl: 'perfect-illusion',
-        description: 'YOU are the perfect illusion.'
+        description: 'YOU are the perfect illusion.',
+        darkBackground: false
     },
     {
         title: 'Bite Me',
@@ -37,6 +39,7 @@ export const ShopItems = [
         id: 3,
         price: 25,
         linkUrl: 'bite-me',
-        description: 'Just in time for Halloween. Spooky.'
+        description: 'Just in time for Halloween. Spooky.',
+        darkBackground: true
     }
 ]

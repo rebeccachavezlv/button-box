@@ -9,8 +9,10 @@ import CustomButton from '../custom-button/custom-button.component'
 class MenuItem extends React.Component {
     render(){
         const currentItem = this.props.item
-        const { title, mainImage, description, price, linkUrl } = currentItem
+        const { title, mainImage, description, price, linkUrl, darkBackground } = currentItem
         const { history, addItemToCart } = this.props
+
+        const goToDetailPage = () => history.push(`item/${linkUrl}`)
 
         return(
             <div className='menu-item'>
@@ -22,15 +24,15 @@ class MenuItem extends React.Component {
                 >
         
                 <div className='add-to-cart'>
-                    <CustomButton onClick={() => addItemToCart(currentItem)}>ADD TO CART</CustomButton>
+                    <CustomButton inverted={darkBackground ? true : false} onClick={() => addItemToCart(currentItem)}>ADD TO CART</CustomButton>
                 </div>
                 <div className='more-details'>
-                    <CustomButton onClick={() => history.push(`item/${linkUrl}`)}>MORE DETAILS</CustomButton>
+                    <CustomButton inverted={darkBackground ? true : false} onClick={goToDetailPage}>MORE DETAILS</CustomButton>
                 </div>
         
                 </div>
         
-                <div className='content'>
+                <div className='content' onClick={goToDetailPage}>
                     <div className='title'>{title}</div>
                     <div className='price'>${price}</div>
                     <div className='subtitle'>{description}</div>
